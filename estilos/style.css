@@ -230,9 +230,14 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 90%;
+        width: 100%;
     }
-  }
+
+
+    .screen_display{
+        width: 100%;
+    }
+
 
   @media only screen and (max-width: 480px) {
     .container {

@@ -6,34 +6,21 @@
 
 body {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #283048;
     background: linear-gradient(to right, #859398, #283048);
     padding: 20px; 
 }
 
 
-.psp{
-    background-image: url("https://i.redd.it/75qqpnnk1o691.png");
-    padding: 160px 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-}
 
 .container-carousel {
     position: relative;
-    width: 600px;
-    height: 350px;
-
-    background-color: #e0e0e0;
+    width: 540px;
+    height: 305px;
+    background-color: #3533339d;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.66);
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
    
 }
@@ -56,38 +43,6 @@ body {
     border-radius: 15px;
 }
 
-.btn-left,
-.btn-right {
-    display: flex;
-    position: absolute;
-    top: 90%;
-    font-size: 1.5rem;
-    background-color: transparent;
-    border-radius: 50%;
-    padding: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #ffffff81;
-    transform: translate(0,-50%);
-    transition: .5s ease;
-    user-select: none; 
-}
-
-.btn-left:hover,
-.btn-right:hover,
-.reset-btn:hover,
-.power-btn:hover {
-    background-color: #333333d4;
-    color: #fff;
-}
-
-.btn-left {
-    left: 10px;
-}
-
-.btn-right {
-    right: 10px;
-}
 .container-starbtn{
     display: flex;
     flex-direction: row;
@@ -110,6 +65,165 @@ body {
     user-select: none; 
 }
 
+.container{
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    width: 800px;
+    height: 340px;
+    
+  }
+  
+  
+  .joy_left{
+    width: 100px;
+    height: 100%;
+    background-color: #67b9de;
+    border-radius: 50px 4px 4px 50px ;
+    box-shadow: 6px -6px 6px #0006 inset,
+                0 6px 2px #fff6 inset;
+  }
+  
+  .screen_container{
+    background-color: #333;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+  }
+  .screen_display{
+    background-color: #111;
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+  }
+  .joy_rigth{
+    width: 100px;
+    height: 100%;
+    background-color: #de5e53;
+    border-radius: 4px 50px 50px 4px;
+    box-shadow: -6px -6px 6px #0006 inset,
+                0 6px 2px #fff6 inset;
+  }
+  
+  
+  .btn_container, .btn_container_left{
+    display: grid;
+    width: 85%;
+    margin-top: 1rem;
+    margin-left: 0.4rem;
+    grid-template-rows: 35px 80px 80px;
+    place-content: center;
+    
+  }
+  .btn_container_left{
+    gap: 20px;
+  }
+
+  #btn_left, #btn-right{
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+  #btn-right:hover{
+        box-shadow: -6px -6px 6px #0006 inset,
+        0 6px 2px #fff6 inset;
+        cursor: pointer;
+  }
+  #btn_left:hover{
+    box-shadow: -6px -6px 6px #0006 inset,
+    0 6px 2px #fff6 inset;
+    cursor: pointer;
+  }
+  
+  .start{
+    font-size: 2rem;
+    color:#3d3d3d;
+    font-family: monospace;
+    font-weight: 800;
+    text-shadow: 1px 1px 0 #000;
+    text-align:end;
+    cursor: pointer;
+  }
+  .start:hover{
+    color: #666;
+  }
+  
+  .reset{
+    text-align: center;
+    font-size: 2rem;
+    color:#3d3d3d;
+    font-family: monospace;
+    font-weight: 800;
+    text-shadow: 1px 1px 0 #000;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .reset:hover{
+    color: #666;
+  }
+  
+  .btn_accions{
+    display: grid;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    grid-template-columns: repeat(3, 20px);
+    grid-template-rows: repeat(3, 20px);
+    grid-template-areas: 
+      ". x ."
+      "y . a"
+      ". b .";
+  }
+  
+  .btn_accions .btn_name:nth-child(1){grid-area: x;}
+  .btn_accions .btn_name:nth-child(2){grid-area: y;}
+  .btn_accions .btn_name:nth-child(3){grid-area: a;}
+  .btn_accions .btn_name:nth-child(4){grid-area: b;}
+  
+  .btn_name_left{
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+    width: 20px;
+    height: 20px;
+    background-color: #444;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 1px solid #111;
+    box-shadow: 0 -2px 2p #222 inset;
+  }
+  
+  
+  
+  .btn_name{
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    background-color: #444;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 1px solid #111;
+    box-shadow: 0 -2px 2p #222 inset;
+  }
+  
+  
+  .btn_joystick{
+    margin-top: 2rem;
+    height: 80%;
+    width: auto;
+    border-radius: 50%;
+    background-color: #222;
+    box-shadow: -6px -6px 6px #0006 inset,
+                 0 6px 2px #fff6 inset;
+  }
+  
 
 @media only screen and (max-width: 768px) {
     .container {

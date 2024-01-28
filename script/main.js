@@ -1,9 +1,9 @@
-const btnLeft = document.querySelector(".btn-left"),
-      btnRight = document.querySelector(".btn-right"),
+const btnLeft = document.querySelector("#btn_left"),
+      btnRight = document.querySelector("#btn-right"),
       slider = document.querySelector("#slider"),
       sliderSection = document.querySelectorAll(".slider-section"),
-      btnReset = document.querySelector(".reset-btn"),
-      btnPower = document.querySelector(".power-btn");
+      btnReset = document.querySelector(".reset_btn"),
+      btnPower = document.querySelector(".start_btn");
 
 let operacion = 0,
     counter = 0,
@@ -65,8 +65,9 @@ function updateConsoleState() {
         slider.style.filter = "brightness(100%)";
         document.querySelector('.consola').classList.remove('apagada');
     } else {
-        slider.style.filter = "brightness(30%)";
+        slider.style.filter = "brightness(5%)";
         document.querySelector('.consola').classList.add('apagada');
     }
 }
+
 
